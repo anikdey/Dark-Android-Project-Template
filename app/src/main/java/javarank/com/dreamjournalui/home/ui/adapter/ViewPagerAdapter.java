@@ -7,6 +7,8 @@ import android.support.v4.app.FragmentPagerAdapter;
 import java.util.ArrayList;
 import java.util.List;
 
+import javarank.com.dreamjournalui.home.ui.fragment.BasePageFragment;
+
 public class ViewPagerAdapter extends FragmentPagerAdapter {
 
     private final List<Fragment> fragments = new ArrayList<>();
@@ -31,10 +33,13 @@ public class ViewPagerAdapter extends FragmentPagerAdapter {
         return titles.get(position);
     }
 
-    public void addFragment(Fragment fragment, String title) {
+    public <P extends BasePageFragment> void addFragment(P fragment, String title) {
         fragments.add(fragment);
         titles.add(title);
     }
 
+    public BasePageFragment getCurrentFragment(int position) {
+        return (BasePageFragment) fragments.get(position);
+    }
 
 }
