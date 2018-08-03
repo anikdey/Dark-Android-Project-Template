@@ -6,7 +6,6 @@ import android.support.v4.view.ViewPager;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.Button;
 
 import butterknife.BindView;
 import javarank.com.dreamjournalui.R;
@@ -28,9 +27,9 @@ public class HomeFragment extends BaseSupportFragment {
 
     protected void init() {
         adapter = new ViewPagerAdapter(getChildFragmentManager());
-        adapter.addFragment(new DemoFragment(), "Demo 1");
-        adapter.addFragment(new DemoFragment(), "Demo 2");
-        adapter.addFragment(new DemoFragment(), "Demo 3");
+        adapter.addFragment(new GettingStartedFragment(), "Demo 1");
+        adapter.addFragment(new GettingStartedFragment(), "Demo 2");
+        adapter.addFragment(new GettingStartedFragment(), "Demo 3");
         viewPager.setAdapter(adapter);
         viewPager.setOffscreenPageLimit(adapter.getCount());
 

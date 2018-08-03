@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ripple xmlns:android="http://schemas.android.com/apk/res/android"
+    android:color="@color/colorAccent">
+    <item android:id="@android:id/background">
+        <shape android:shape="rectangle">
+            <solid android:color="@color/buttonColorSkyBlue" />
+            <padding
+                android:bottom="@dimen/padding_5dp"
+                android:left="@dimen/padding_20dp"
+                android:right="@dimen/padding_20dp"
+                android:top="@dimen/padding_5dp" />
+            <corners android:radius="@dimen/radius_25dp" />
+        </shape>
+    </item>
+</ripple>
