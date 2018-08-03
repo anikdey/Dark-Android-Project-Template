@@ -1,80 +1,137 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@android:color/background_light">
+    android:background="@color/colorPrimary"
+    android:orientation="vertical"
+    android:padding="@dimen/margin_16dp">
 
-    <android.support.design.widget.AppBarLayout
-        android:id="@+id/appbar"
+    <TextView
+        android:id="@+id/scroll_position_text_view"
+        style="@style/current_page_text_view_style" />
+
+    <ScrollView
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar">
+        android:layout_height="wrap_content">
 
-        <android.support.design.widget.CollapsingToolbarLayout
-            android:id="@+id/collapsing"
+        <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            app:contentScrim="?attr/colorPrimary"
-            app:layout_scrollFlags="scroll|exitUntilCollapsed">
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
 
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:gravity="center_horizontal">
+            <android.support.v7.widget.CardView
+                style="@style/card_view_style"
+                app:cardBackgroundColor="@color/cardViewBackground"
+                app:cardCornerRadius="@dimen/card_radius_4dp">
 
-                <ImageView
-                    android:id="@+id/backdrop"
-                    android:layout_width="@dimen/profile_image"
-                    android:layout_height="@dimen/profile_image"
-                    android:layout_marginTop="@dimen/margin_24dp"
-                    android:scaleType="centerCrop"
-                    android:src="@drawable/pic_1"
-                    app:layout_collapseMode="parallax" />
-            </LinearLayout>
-        </android.support.design.widget.CollapsingToolbarLayout>
-    </android.support.design.widget.AppBarLayout>
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="@dimen/margin_16dp">
 
-    <android.support.v4.widget.NestedScrollView
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:background="@color/background"
-        app:layout_behavior="@string/appbar_scrolling_view_behavior">
+                    <Button
+                        style="@style/save_dream_button"
+                        android:layout_alignParentRight="true"
+                        android:paddingRight="@dimen/padding_20dp"
+                        android:text="Save Dream" />
 
-        <RelativeLayout
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:layout_margin="@dimen/margin_16dp"
-            android:paddingBottom="@dimen/padding_50dp">
+                    <TextView
+                        android:id="@+id/dream_journal_text_view"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="@dimen/margin_8dp"
+                        android:text="Dream Journal"
+                        android:textAllCaps="true"
+                        android:textColor="@color/buttonColor"
+                        android:textSize="@dimen/text_size_12sp" />
 
-            <TextView
-                android:id="@+id/scroll_position_text_view"
-                style="@style/current_page_text_view_style" />
 
-            <TextView
-                android:id="@+id/title_text_view"
-                style="@style/base_title_text_view_style"
-                android:layout_below="@+id/scroll_position_text_view"
-                android:text="Chapter 1. Getting Started" />
+                </RelativeLayout>
 
-            <TextView
-                android:id="@+id/description_text_view"
-                style="@style/description_text_view_style"
-                android:layout_below="@+id/title_text_view" />
+            </android.support.v7.widget.CardView>
 
-            <Button
-                android:id="@+id/dream_recall_button"
-                style="@style/dream_recall_button"
-                android:layout_alignParentLeft="true"
-                android:layout_below="@+id/description_text_view"
-                android:text="@string/dream_recall" />
+            <android.support.v7.widget.CardView
+                style="@style/card_view_style"
+                app:cardBackgroundColor="@color/cardViewBackground"
+                app:cardCornerRadius="@dimen/card_radius_4dp">
 
-            <Button
-                android:id="@+id/skip_guide_button"
-                style="@style/skip_guide_button"
-                android:layout_alignParentRight="true"
-                android:layout_below="@+id/description_text_view"
-                android:text="@string/skip_guide" />
-        </RelativeLayout>
-    </android.support.v4.widget.NestedScrollView>
-</android.support.design.widget.CoordinatorLayout>
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="@dimen/margin_16dp">
+
+                    <ImageButton style="@style/error_image_button" />
+
+
+                    <TextView
+                        android:id="@+id/title_text_view"
+                        style="@style/card_title_text_view"
+                        android:text="Lucidity" />
+
+                    <TextView
+                        android:id="@+id/small_title_text_view"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/title_text_view"
+                        android:layout_marginBottom="@dimen/margin_16dp"
+                        android:text="Did you feel in control"
+                        android:textAllCaps="true"
+                        android:textColor="#9494A4"
+                        android:textSize="@dimen/text_size_12sp"
+                        android:textStyle="bold" />
+
+                    <LinearLayout
+                        style="@style/radio_group_container_layout_style"
+                        android:layout_below="@+id/small_title_text_view">
+
+                        <TextView
+                            android:id="@+id/no_text_view"
+                            style="@style/card_title_text_view"
+                            android:layout_marginRight="@dimen/margin_8dp"
+                            android:text="No" />
+
+                        <RadioGroup
+                            android:id="@+id/radio_group"
+                            style="@style/radio_group_style">
+
+                            <RadioButton
+                                style="@style/first_radio_button"
+                                android:textColor="@color/white" />
+
+                            <RadioButton
+                                style="@style/base_radio_button_style"
+                                android:textColor="@color/white" />
+
+                            <RadioButton
+                                style="@style/base_radio_button_style"
+                                android:textColor="@color/white" />
+
+                            <RadioButton
+                                style="@style/base_radio_button_style"
+                                android:textColor="@color/white" />
+
+                            <RadioButton
+                                style="@style/base_radio_button_style"
+                                android:textColor="@color/white" />
+                        </RadioGroup>
+
+                        <TextView
+                            android:id="@+id/very_text_view"
+                            style="@style/card_title_text_view"
+                            android:layout_marginLeft="@dimen/margin_8dp"
+                            android:text="Very" />
+
+                    </LinearLayout>
+
+                </RelativeLayout>
+
+
+            </android.support.v7.widget.CardView>
+
+
+        </LinearLayout>
+    </ScrollView>
+
+
+</LinearLayout>

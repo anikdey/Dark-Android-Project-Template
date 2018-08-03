@@ -7,8 +7,8 @@
             <padding
                 android:bottom="@dimen/padding_5dp"
                 android:left="@dimen/padding_20dp"
-                android:right="@dimen/padding_10dp"
-                android:top="5dp" />
+                android:right="@dimen/padding_20dp"
+                android:top="@dimen/padding_5dp" />
             <corners android:radius="@dimen/radius_25dp" />
         </shape>
     </item>

@@ -16,8 +16,10 @@
     <dimen name="text_size_24sp">24sp</dimen>
     <dimen name="text_size_16sp">16sp</dimen>
     <dimen name="text_size_12sp">12sp</dimen>
+    <dimen name="text_size_20sp">20sp</dimen>
 
     <dimen name="radius_25dp">25dp</dimen>
     <dimen name="profile_image">150dp</dimen>
+    <dimen name="card_radius_4dp">4dp</dimen>
 
 </resources>
