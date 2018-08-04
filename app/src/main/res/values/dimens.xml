@@ -21,5 +21,10 @@
     <dimen name="radius_25dp">25dp</dimen>
     <dimen name="profile_image">150dp</dimen>
     <dimen name="card_radius_4dp">4dp</dimen>
+    <dimen name="radio_button_radius">40dp</dimen>
+
+
+    <dimen name="rounded_radio_button_height_width">32dp</dimen>
+
 
 </resources>

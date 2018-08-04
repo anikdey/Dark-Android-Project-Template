@@ -3,7 +3,7 @@
     android:shape="rectangle">
 
     <corners android:radius="@dimen/radio_button_radius" />
-    <solid android:color="@color/colorAccent" />
+    <solid android:color="#FFBCFF" />
     <size
         android:width="@dimen/rounded_radio_button_height_width"
         android:height="@dimen/rounded_radio_button_height_width" />
