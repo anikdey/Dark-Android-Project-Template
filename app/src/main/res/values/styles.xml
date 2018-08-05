@@ -75,12 +75,21 @@
         <item name="android:layout_alignParentRight">true</item>
     </style>
 
-    <style name="card_title_text_view">
+    <style name="h1_text_view">
         <item name="android:layout_width">wrap_content</item>
         <item name="android:layout_height">wrap_content</item>
         <item name="android:textColor">@color/white</item>
         <item name="android:textSize">@dimen/text_size_16sp</item>
         <item name="android:textStyle">bold</item>
+    </style>
+
+    <style name="h2_text_view">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textColor">#C4C4CD</item>
+        <item name="android:textSize">@dimen/text_size_10sp</item>
+        <item name="android:layout_marginBottom">@dimen/margin_16dp</item>
+        <item name="android:textAllCaps">true</item>
     </style>
 
     <style name="radio_group_container_layout_style">
@@ -129,5 +138,20 @@
         <item name="android:button">@null</item>
     </style>
 
+    <style name="square_shape">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:background">@drawable/square_shape</item>
+        <item name="android:tint">@color/white</item>
+        <item name="android:scaleType">center</item>
+    </style>
+
+    <style name="voice_recording" parent="square_shape">
+        <item name="android:src">@drawable/baseline_mic_black_18</item>
+    </style>
+
+    <style name="photos" parent="square_shape">
+        <item name="android:src">@drawable/baseline_add_black_18</item>
+    </style>
 
 </resources>
