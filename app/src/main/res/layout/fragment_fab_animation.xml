@@ -1,0 +1,47 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorPrimary">
+
+
+    <com.shuvam.triangleindicator.TriangularIndicator
+        android:id="@+id/triangle"
+        android:layout_width="match_parent"
+        android:layout_height="80dp"
+        android:layout_marginBottom="@dimen/margin_8dp"
+        app:no_of_sections="5"
+        app:set_colour="@color/cardViewBackground" />
+
+
+    <TextView
+        android:id="@+id/scroll_position_text_view"
+        style="@style/current_page_text_view_style"
+        android:layout_below="@+id/triangle" />
+
+
+    <android.support.design.widget.FloatingActionButton
+        android:id="@+id/fab"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"
+        android:layout_marginBottom="16dp"
+        android:layout_marginRight="16dp"
+        android:src="@drawable/baseline_add_black_18"
+        android:tint="@color/white"
+        app:backgroundTint="@color/colorPrimaryDark"
+        app:borderWidth="0dp"
+        app:fabSize="normal"
+        app:rippleColor="@color/colorPrimaryDark" />
+
+    <com.github.fabtransitionactivity.SheetLayout
+        android:id="@+id/bottom_sheet"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_gravity="bottom"
+        android:elevation="2dp"
+        app:ft_color="@color/colorPrimaryDark"
+        app:ft_container_gravity="center" />
+
+</RelativeLayout>
