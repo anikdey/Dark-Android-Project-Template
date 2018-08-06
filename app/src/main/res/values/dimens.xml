@@ -13,10 +13,12 @@
     <dimen name="margin_32dp">32dp</dimen>
     <dimen name="margin_40dp">40dp</dimen>
 
-    <dimen name="text_size_24sp">24sp</dimen>
-    <dimen name="text_size_16sp">16sp</dimen>
+
+    <dimen name="text_size_10sp">10sp</dimen>
     <dimen name="text_size_12sp">12sp</dimen>
+    <dimen name="text_size_16sp">16sp</dimen>
     <dimen name="text_size_20sp">20sp</dimen>
+    <dimen name="text_size_24sp">24sp</dimen>
 
     <dimen name="radius_25dp">25dp</dimen>
     <dimen name="profile_image">150dp</dimen>
@@ -24,7 +26,8 @@
     <dimen name="radio_button_radius">40dp</dimen>
 
 
-    <dimen name="rounded_radio_button_height_width">32dp</dimen>
+    <dimen name="rounded_radio_button_height_width">24dp</dimen>
+    <dimen name="square_shape_height_width">60dp</dimen>
 
 
 </resources>
