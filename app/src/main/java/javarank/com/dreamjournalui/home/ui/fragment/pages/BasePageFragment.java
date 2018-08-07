@@ -1,4 +1,4 @@
-package javarank.com.dreamjournalui.home.ui.fragment;
+package javarank.com.dreamjournalui.home.ui.fragment.pages;
 
 import javarank.com.dreamjournalui.common.base.fragment.BaseSupportFragment;
 

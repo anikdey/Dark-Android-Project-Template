@@ -1,4 +1,4 @@
-package javarank.com.dreamjournalui.home.ui.fragment;
+package javarank.com.dreamjournalui.home.ui.fragment.pages;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -17,7 +17,6 @@ import com.shuvam.triangleindicator.TriangularIndicator;
 import butterknife.BindView;
 import butterknife.OnClick;
 import javarank.com.dreamjournalui.R;
-import javarank.com.dreamjournalui.SplashScreenActivity;
 
 public class FabAnimationFragment extends BasePageFragment implements SheetLayout.OnFabAnimationEndListener {
     public static final String TAG = FabAnimationFragment.class.getSimpleName();

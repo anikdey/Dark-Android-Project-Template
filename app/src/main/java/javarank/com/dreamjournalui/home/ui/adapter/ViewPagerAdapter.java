@@ -7,7 +7,7 @@ import android.support.v4.app.FragmentPagerAdapter;
 import java.util.ArrayList;
 import java.util.List;
 
-import javarank.com.dreamjournalui.home.ui.fragment.BasePageFragment;
+import javarank.com.dreamjournalui.home.ui.fragment.pages.BasePageFragment;
 
 public class ViewPagerAdapter extends FragmentPagerAdapter {
 

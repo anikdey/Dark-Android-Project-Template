@@ -11,6 +11,10 @@ import butterknife.BindView;
 import javarank.com.dreamjournalui.R;
 import javarank.com.dreamjournalui.common.base.fragment.BaseSupportFragment;
 import javarank.com.dreamjournalui.home.ui.adapter.ViewPagerAdapter;
+import javarank.com.dreamjournalui.home.ui.fragment.pages.AddDreamFragment;
+import javarank.com.dreamjournalui.home.ui.fragment.pages.FabAnimationFragment;
+import javarank.com.dreamjournalui.home.ui.fragment.pages.GettingStartedFragment;
+import javarank.com.dreamjournalui.home.ui.fragment.pages.SecondFragment;
 
 public class HomeFragment extends BaseSupportFragment {
     public static final String TAG = HomeFragment.class.getSimpleName();
@@ -27,6 +31,7 @@ public class HomeFragment extends BaseSupportFragment {
 
     protected void init() {
         adapter = new ViewPagerAdapter(getChildFragmentManager());
+        adapter.addFragment(new AddDreamFragment(), "Add Dream");
         adapter.addFragment(new GettingStartedFragment(), "Getting Started");
         adapter.addFragment(new SecondFragment(), "Second Fragment");
         adapter.addFragment(FabAnimationFragment.newInstance(), "fab Fragment");

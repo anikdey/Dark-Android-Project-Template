@@ -1,4 +1,4 @@
-package javarank.com.dreamjournalui.home.ui.fragment;
+package javarank.com.dreamjournalui.home.ui.fragment.pages;
 
 import android.animation.Animator;
 import android.app.Notification;
@@ -85,7 +85,7 @@ public class GettingStartedFragment extends BasePageFragment {
         RemoteViews contentView = new RemoteViews(getContext().getPackageName(), R.layout.notification_small);
         contentView.setImageViewResource(R.id.image, R.drawable.app_icon);
         contentView.setTextViewText(R.id.title, "Custom notification");
-        contentView.setTextViewText(R.id.text, "This is a custom layout");
+        //contentView.setTextViewText(R.id.text, "This is a custom layout");
 
         Intent intent = HomeActivity.newIntent(getContext());
         PendingIntent pendingIntent = PendingIntent.getActivity(getContext(), 0, intent, PendingIntent.FLAG_ONE_SHOT);
@@ -100,7 +100,8 @@ public class GettingStartedFragment extends BasePageFragment {
         notificationBuilder.setContentIntent(pendingIntent);
 
         Notification notification = notificationBuilder.build();
-        notification.flags |= Notification.FLAG_AUTO_CANCEL;
+        //notification.flags |= Notification.FLAG_AUTO_CANCEL;
+        notification.flags |= Notification.FLAG_NO_CLEAR;
         notification.defaults |= Notification.DEFAULT_SOUND;
         notification.defaults |= Notification.DEFAULT_VIBRATE;
 
