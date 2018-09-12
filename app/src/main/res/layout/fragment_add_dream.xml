@@ -4,6 +4,8 @@
     android:layout_height="match_parent"
     android:background="@color/colorPrimary">
 
-
+    <TextView
+        android:id="@+id/scroll_position_text_view"
+        style="@style/current_page_text_view_style" />
 
 </RelativeLayout>

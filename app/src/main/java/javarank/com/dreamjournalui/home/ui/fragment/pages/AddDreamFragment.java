@@ -1,24 +1,20 @@
 package javarank.com.dreamjournalui.home.ui.fragment.pages;
 
-import android.graphics.Bitmap;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.webkit.WebChromeClient;
-import android.webkit.WebView;
-import android.webkit.WebViewClient;
+import android.widget.TextView;
 
 import butterknife.BindView;
 import javarank.com.dreamjournalui.R;
 
 public class AddDreamFragment extends BasePageFragment {
-
     public static final String TAG = AddDreamFragment.class.getSimpleName();
 
-    @BindView(R.id.web_view)
-    WebView webView;
+    @BindView(R.id.scroll_position_text_view)
+    TextView scrollPositionTextView;
 
     public static AddDreamFragment getInstance() {
         AddDreamFragment fragment = new AddDreamFragment();
@@ -27,7 +23,7 @@ public class AddDreamFragment extends BasePageFragment {
 
     @Override
     public void updatePagePosition(int currentPosition, int totalPages) {
-
+        scrollPositionTextView.setText("" + (currentPosition + 1) + " of " + totalPages);
     }
 
     @Override

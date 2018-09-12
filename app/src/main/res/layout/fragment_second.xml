@@ -32,6 +32,7 @@
                     android:minHeight="100dp">
 
                     <Button
+                        android:id="@+id/save_dream_button"
                         style="@style/save_dream_button"
                         android:layout_alignParentRight="true"
                         android:paddingRight="@dimen/padding_20dp"
@@ -57,17 +58,19 @@
                     <TextView
                         android:id="@+id/count_text_view"
                         style="@style/h2_text_view"
-                        android:layout_below="@+id/date_text_view"
-                        android:text="0 words" />
+                        android:layout_below="@+id/date_text_view" />
 
-                   <!-- <EditText
+                    <EditText
+                        android:id="@+id/what_happened_edit_text"
                         android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
+                        android:layout_height="100dp"
                         android:layout_below="@+id/count_text_view"
-                        android:hint="What happened in your dream?"
+                        android:hint="@string/what_happened_in_your_dream"
                         android:textColorHint="#9494A4"
-                        android:textAlignment="textStart"
-                        />-->
+                        android:textColor="@color/white"
+                        android:gravity="left"
+                        android:maxLength="@integer/max_limit_10"
+                        /><!---->
                 </RelativeLayout>
 
             </android.support.v7.widget.CardView>
@@ -83,7 +86,6 @@
                     android:padding="@dimen/margin_16dp">
 
                     <ImageButton style="@style/error_image_button" />
-
 
                     <TextView
                         android:id="@+id/lucidity_text_view"
@@ -106,6 +108,7 @@
                             android:id="@+id/no_text_view"
                             style="@style/h1_text_view"
                             android:layout_marginRight="@dimen/margin_8dp"
+                            android:layout_marginBottom="0dp"
                             android:text="No" />
 
                         <RadioGroup
@@ -141,6 +144,7 @@
                             android:id="@+id/very_text_view"
                             style="@style/h1_text_view"
                             android:layout_marginLeft="@dimen/margin_8dp"
+                            android:layout_marginBottom="0dp"
                             android:text="Very" />
                     </LinearLayout>
 
@@ -170,6 +174,7 @@
                             android:id="@+id/fuzzy_text_view"
                             style="@style/h1_text_view"
                             android:layout_marginRight="@dimen/margin_8dp"
+                            android:layout_marginBottom="0dp"
                             android:text="Fuzzy" />
 
                         <RadioGroup
@@ -205,6 +210,7 @@
                             android:id="@+id/clear_text_view"
                             style="@style/h1_text_view"
                             android:layout_marginLeft="@dimen/margin_8dp"
+                            android:layout_marginBottom="0dp"
                             android:text="Clear" />
                     </LinearLayout>
                 </RelativeLayout>
@@ -239,15 +245,18 @@
                         android:layout_marginBottom="@dimen/margin_16dp"
                         android:text="your dream signs" />
 
-                    <TextView
+                    <EditText
                         android:layout_below="@+id/tags_small_title_text_view"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:drawableLeft="@drawable/baseline_edit_black_18"
                         android:drawableTint="#9494A4"
                         android:drawablePadding="@dimen/padding_10dp"
-                        android:text="Start typing to tag dream...."
+                        android:padding="@dimen/padding_10dp"
+                        android:hint="Start typing to tag dream...."
                         android:textColor="#9494A4"
+                        android:textColorHint="#9494A4"
+                        android:maxLines="2"
                         android:gravity="center_vertical"/>
                 </RelativeLayout>
 
@@ -280,6 +289,7 @@
                         android:text="too tired to type" />
 
                     <ImageView
+                        android:id="@+id/recording_image_view"
                         style="@style/voice_recording"
                         android:layout_below="@+id/tired_to_type_text_view"/>
                 </RelativeLayout>
@@ -312,14 +322,12 @@
                         android:text="Draw your dreams" />
 
                     <ImageView
+                        android:id="@+id/add_photo_image_view"
                         style="@style/photos"
                         android:layout_below="@+id/draw_dreams_text_view"/>
                 </RelativeLayout>
 
             </android.support.v7.widget.CardView>
-
         </LinearLayout>
     </ScrollView>
-
-
 </LinearLayout>

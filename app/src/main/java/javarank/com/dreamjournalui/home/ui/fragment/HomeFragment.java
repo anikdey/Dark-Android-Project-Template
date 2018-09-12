@@ -31,9 +31,9 @@ public class HomeFragment extends BaseSupportFragment {
 
     protected void init() {
         adapter = new ViewPagerAdapter(getChildFragmentManager());
-        adapter.addFragment(new AddDreamFragment(), "Add Dream");
         adapter.addFragment(new GettingStartedFragment(), "Getting Started");
         adapter.addFragment(new SecondFragment(), "Second Fragment");
+        adapter.addFragment(new AddDreamFragment(), "Add Dream");
         adapter.addFragment(FabAnimationFragment.newInstance(), "fab Fragment");
         viewPager.setAdapter(adapter);
         viewPager.setOffscreenPageLimit(adapter.getCount());
