@@ -13,8 +13,11 @@ import android.widget.TextView;
 import java.util.List;
 
 import butterknife.BindView;
+import butterknife.OnClick;
 import javarank.com.dreamjournalui.R;
+import javarank.com.dreamjournalui.home.listener.OnItemClickListener;
 import javarank.com.dreamjournalui.home.model.Item;
+import javarank.com.dreamjournalui.home.ui.adapter.DatesRecyclerViewAdapter;
 import javarank.com.dreamjournalui.home.ui.adapter.ItemAdapter;
 
 public class AddDreamFragment extends BasePageFragment {
@@ -24,10 +27,13 @@ public class AddDreamFragment extends BasePageFragment {
     TextView scrollPositionTextView;
     @BindView(R.id.recycler_view)
     RecyclerView recyclerView;
+    @BindView(R.id.dates_recycler_view)
+    RecyclerView datesRecyclerView;
     @BindView(R.id.nothing_found_linear_layout)
     LinearLayout nothingFoundLinearLayout;
 
     private ItemAdapter adapter;
+    private DatesRecyclerViewAdapter datesRecyclerViewAdapter;
 
     public static AddDreamFragment getInstance() {
         AddDreamFragment fragment = new AddDreamFragment();
@@ -38,6 +44,7 @@ public class AddDreamFragment extends BasePageFragment {
     public void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         adapter = new ItemAdapter();
+        datesRecyclerViewAdapter = new DatesRecyclerViewAdapter();
     }
 
     @Override
@@ -48,7 +55,11 @@ public class AddDreamFragment extends BasePageFragment {
     @Override
     protected void init() {
         initRecyclerView();
+        setUpListenerForAdapter();
         setItem(Item.getItems());
+
+        initDatesRecyclerView();
+        setDateItem(Item.getItems());
     }
 
     private void initRecyclerView() {
@@ -58,20 +69,49 @@ public class AddDreamFragment extends BasePageFragment {
         recyclerView.setAdapter(adapter);
     }
 
-    public void setItem(List<Item> materialToImages) {
-        if( materialToImages != null && materialToImages.size()>0 ) {
+    private void setUpListenerForAdapter() {
+        adapter.setOnItemClickListener(new OnItemClickListener() {
+            @Override
+            public void onItemClick(int position, View view) {
+                showMessage("You click on "+ position);
+            }
+        });
+    }
+
+    private void initDatesRecyclerView() {
+        LinearLayoutManager layoutManager = new LinearLayoutManager(getContext(), LinearLayoutManager.HORIZONTAL, false);
+        datesRecyclerView.hasFixedSize();
+        datesRecyclerView.setLayoutManager(layoutManager);
+        datesRecyclerView.setAdapter(datesRecyclerViewAdapter);
+    }
+
+    public void setItem(List<Item> items) {
+        if( items != null && items.size()>0 ) {
             controlVisibility(View.VISIBLE, View.GONE);
             adapter.clearItems();
-            adapter.addItems(materialToImages);
+            adapter.addItems(items);
             adapter.notifyDataSetChanged();
         } else {
             controlVisibility(View.GONE, View.VISIBLE);
         }
     }
 
+    public void setDateItem(List<Item> items) {
+        if( items != null && items.size()>0 ) {
+            datesRecyclerViewAdapter.clearItems();
+            datesRecyclerViewAdapter.addItems(items);
+            datesRecyclerViewAdapter.notifyDataSetChanged();
+        }
+    }
+
     private void controlVisibility(int listVisibility, int noDataVisibility){
         recyclerView.setVisibility(listVisibility);
         nothingFoundLinearLayout.setVisibility(noDataVisibility);
+    }
+
+    @OnClick(R.id.fab)
+    protected void onAddFabClick() {
+        showMessage(getString(R.string.todo));
     }
 
     @Override
