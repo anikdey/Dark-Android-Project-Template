@@ -18,14 +18,14 @@
             android:name="com.google.firebase.messaging.default_notification_color"
             android:resource="@color/black" />
 
-        <activity android:name=".SplashScreenActivity">
+        <activity android:name=".SplashScreenActivity"  android:screenOrientation="portrait">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".home.ui.activity.HomeActivity"></activity>
+        <activity android:name=".home.ui.activity.HomeActivity" android:screenOrientation="portrait"></activity>
     </application>
 
 </manifest>
