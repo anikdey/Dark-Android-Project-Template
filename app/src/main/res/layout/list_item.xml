@@ -10,7 +10,7 @@
         android:layout_height="wrap_content"
         android:padding="@dimen/margin_16dp">
 
-        <ImageButton style="@style/error_image_button" />
+        <ImageButton style="@style/share_image_button" />
 
         <TextView
             android:id="@+id/tag_text_view"

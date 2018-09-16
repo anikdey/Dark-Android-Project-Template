@@ -77,6 +77,10 @@
         <item name="android:layout_alignParentRight">true</item>
     </style>
 
+    <style name="share_image_button" parent="error_image_button">
+        <item name="android:src">@drawable/baseline_share_24</item>
+    </style>
+
     <style name="h1_text_view">
         <item name="android:layout_width">wrap_content</item>
         <item name="android:layout_height">wrap_content</item>
