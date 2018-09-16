@@ -10,15 +10,20 @@ import android.view.ViewGroup;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 
+import java.util.ArrayList;
+import java.util.Calendar;
+import java.util.GregorianCalendar;
 import java.util.List;
 
 import butterknife.BindView;
 import butterknife.OnClick;
 import javarank.com.dreamjournalui.R;
 import javarank.com.dreamjournalui.home.listener.OnItemClickListener;
+import javarank.com.dreamjournalui.home.model.DateItem;
 import javarank.com.dreamjournalui.home.model.Item;
 import javarank.com.dreamjournalui.home.ui.adapter.DatesRecyclerViewAdapter;
 import javarank.com.dreamjournalui.home.ui.adapter.ItemAdapter;
+import javarank.com.dreamjournalui.home.ui.util.Month;
 
 public class AddDreamFragment extends BasePageFragment {
     public static final String TAG = AddDreamFragment.class.getSimpleName();
@@ -54,12 +59,68 @@ public class AddDreamFragment extends BasePageFragment {
 
     @Override
     protected void init() {
+        setUpDate();
         initRecyclerView();
         setUpListenerForAdapter();
         setItem(Item.getItems());
 
         initDatesRecyclerView();
-        setDateItem(Item.getItems());
+        setUpDate();
+    }
+
+    private void setUpDate() {
+        Calendar calendar = Calendar.getInstance();
+        int year = calendar.get(Calendar.YEAR);
+        int month = calendar.get(Calendar.MONTH)+1;
+        int date = calendar.get(Calendar.DATE);
+        int daysInMonth = getDaysInMonth(year, month, date);
+        String monthName = getMonthAsString(month);
+        setUpDateItems(monthName, date, daysInMonth);
+    }
+
+    private void setUpDateItems(String monthName, int fromToday, int toEnd) {
+        ArrayList<DateItem> items = new ArrayList<>();
+        for(int i=fromToday; i<=toEnd; i++) {
+            items.add(new DateItem(monthName, i));
+        }
+        setDateItem(items);
+    }
+
+    private String getMonthAsString(int monthOfYear) {
+        monthOfYear = monthOfYear-1;
+        String month = null;
+        if( monthOfYear == Month.JANUARY.ordinal() ) {
+            month = Month.JANUARY.getName();
+        } else if(monthOfYear == Month.FEBRUARY.ordinal()) {
+            month = Month.FEBRUARY.getName();
+        } else if(monthOfYear == Month.MARCH.ordinal()) {
+            month = Month.MARCH.getName();
+        }else if(monthOfYear == Month.APRIL.ordinal()) {
+            month = Month.APRIL.getName();
+        }else if(monthOfYear == Month.MAY.ordinal()) {
+            month = Month.MAY.getName();
+        }else if(monthOfYear == Month.JUNE.ordinal()) {
+            month = Month.JUNE.getName();
+        }else if(monthOfYear == Month.JULY.ordinal()) {
+            month = Month.JULY.getName();
+        }else if(monthOfYear == Month.AUGUST.ordinal()) {
+            month = Month.AUGUST.getName();
+        }else if(monthOfYear == Month.SEPTEMBER.ordinal()) {
+            month = Month.SEPTEMBER.getName();
+        }else if(monthOfYear == Month.OCTOBER.ordinal()) {
+            month = Month.OCTOBER.getName();
+        }else if(monthOfYear == Month.NOVEMBER.ordinal()) {
+            month = Month.NOVEMBER.getName();
+        }else if(monthOfYear == Month.DECEMBER.ordinal()) {
+            month = Month.DECEMBER.getName();
+        }
+        return month;
+    }
+
+    private int getDaysInMonth(int year, int month, int day) {
+        Calendar mycal = new GregorianCalendar(year, month, day);
+        int daysInMonth = mycal.getActualMaximum(Calendar.DAY_OF_MONTH);
+        return daysInMonth;
     }
 
     private void initRecyclerView() {
@@ -96,7 +157,7 @@ public class AddDreamFragment extends BasePageFragment {
         }
     }
 
-    public void setDateItem(List<Item> items) {
+    public void setDateItem(List<DateItem> items) {
         if( items != null && items.size()>0 ) {
             datesRecyclerViewAdapter.clearItems();
             datesRecyclerViewAdapter.addItems(items);

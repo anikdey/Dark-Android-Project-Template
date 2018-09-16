@@ -14,11 +14,12 @@ import butterknife.BindView;
 import butterknife.ButterKnife;
 import javarank.com.dreamjournalui.R;
 import javarank.com.dreamjournalui.home.listener.OnItemClickListener;
+import javarank.com.dreamjournalui.home.model.DateItem;
 import javarank.com.dreamjournalui.home.model.Item;
 
 public class DatesRecyclerViewAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder> {
 
-    List<Item> list;
+    List<DateItem> list;
     protected OnItemClickListener itemClickListener;
 
     public DatesRecyclerViewAdapter() {
@@ -34,9 +35,9 @@ public class DatesRecyclerViewAdapter extends RecyclerView.Adapter<RecyclerView.
 
     @Override
     public void onBindViewHolder(@NonNull RecyclerView.ViewHolder holder, int position) {
-        Item item = list.get(position);
+        DateItem item = list.get(position);
         DateItemViewHolder mHolder = (DateItemViewHolder) holder;
-        mHolder.dateTextView.setText(item.getTag());
+        mHolder.dateTextView.setText(item.getMonthName()+"\n"+item.getDay());
     }
 
     @Override
@@ -48,7 +49,7 @@ public class DatesRecyclerViewAdapter extends RecyclerView.Adapter<RecyclerView.
         this.itemClickListener = onItemClickListener;
     }
 
-    public void addItems(List<Item> list) {
+    public void addItems(List<DateItem> list) {
         this.list = list;
     }
 

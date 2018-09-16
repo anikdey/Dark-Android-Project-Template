@@ -51,9 +51,7 @@ public class CustomTabFragment extends BasePageFragment {
         mCustomView.setOnTouchListener(new View.OnTouchListener() {
             @Override
             public boolean onTouch(View v, MotionEvent event) {
-
                 float section = (int) Math.floor(event.getX() * (res.length) / mCustomView.getWidth());
-
                 if( section == 0 ) {
                     setUpFirstSection();
                 } else if( section == 1 ) {
