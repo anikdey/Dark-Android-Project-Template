@@ -9,4 +9,5 @@
     <color name="cardViewBackground">#282849</color>
     <color name="white">@android:color/white</color>
     <color name="black">@android:color/black</color>
+    <color name="editTextHintColor">#9494A4</color>
 </resources>

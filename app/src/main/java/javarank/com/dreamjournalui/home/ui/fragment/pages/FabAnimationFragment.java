@@ -4,16 +4,11 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.design.widget.FloatingActionButton;
-import android.util.Log;
 import android.view.LayoutInflater;
-import android.view.MotionEvent;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
-
 import com.github.fabtransitionactivity.SheetLayout;
-import com.shuvam.triangleindicator.TriangularIndicator;
-
 import butterknife.BindView;
 import butterknife.OnClick;
 import javarank.com.dreamjournalui.R;
@@ -30,8 +25,6 @@ public class FabAnimationFragment extends BasePageFragment implements SheetLayou
     SheetLayout mSheetLayout;
     @BindView(R.id.fab)
     FloatingActionButton mFab;
-    @BindView(R.id.triangle)
-    TriangularIndicator mCustomView;
 
     public static FabAnimationFragment newInstance() {
         FabAnimationFragment fragment = new FabAnimationFragment();
@@ -48,25 +41,6 @@ public class FabAnimationFragment extends BasePageFragment implements SheetLayou
         mSheetLayout.setFab(mFab);
         mSheetLayout.setFabAnimationEndListener(this);
 
-        final int[] res = {R.drawable.ic_android_black_24dp,
-                R.drawable.ic_archive_black_24dp,
-                R.drawable.ic_audiotrack_black_24dp,
-                R.drawable.ic_backup_black_24dp,
-                R.drawable.ic_bluetooth_audio_black_24dp};
-
-        mCustomView.setResources(res);
-
-        mCustomView.setOnTouchListener(new View.OnTouchListener() {
-            @Override
-            public boolean onTouch(View v, MotionEvent event) {
-
-                float section = (int) Math.floor(event.getX() * (res.length) / mCustomView.getWidth());
-
-                Log.d("Touch event value", "" + section);
-                return false;
-            }
-        });
-
     }
 
     @OnClick(R.id.fab)
@@ -77,8 +51,7 @@ public class FabAnimationFragment extends BasePageFragment implements SheetLayou
     @Override
     public void onFabAnimationEnd() {
         mSheetLayout.contractFab();
-        //Intent intent = new Intent(getContext(), SplashScreenActivity.class);
-        //startActivityForResult(intent, REQUEST_CODE);
+        //TODO you can start your activity here....
     }
 
     @Override

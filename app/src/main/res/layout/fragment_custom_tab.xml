@@ -1,0 +1,30 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorPrimary">
+
+    <com.shuvam.triangleindicator.TriangularIndicator
+        android:id="@+id/triangle"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/tab_height"
+        app:no_of_sections="@integer/no_of_sections"
+        app:set_colour="@color/cardViewBackground" />
+
+    <TextView
+        android:id="@+id/scroll_position_text_view"
+        style="@style/current_page_text_view_style"
+        android:layout_below="@+id/triangle"
+        android:layout_margin="@dimen/margin_16dp"
+        android:layout_marginBottom="0dp"/>
+
+    <FrameLayout
+        android:id="@+id/fragment_container"
+        android:layout_below="@+id/scroll_position_text_view"
+        android:paddingLeft="@dimen/padding_16dp"
+        android:paddingRight="@dimen/padding_16dp"
+        android:paddingBottom="@dimen/padding_16dp"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"/>
+
+</RelativeLayout>

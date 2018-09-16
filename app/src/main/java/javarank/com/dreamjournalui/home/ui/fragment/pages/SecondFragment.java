@@ -4,11 +4,14 @@ import android.os.Bundle;
 import android.os.TestLooperManager;
 import android.support.annotation.Nullable;
 import android.support.v4.content.ContextCompat;
+import android.text.Editable;
+import android.text.TextWatcher;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.EditText;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import butterknife.BindView;
 import butterknife.OnClick;
@@ -27,7 +30,28 @@ public class SecondFragment extends BasePageFragment {
     @Override
     protected void init() {
         setUpWordCount(0);
-        CommonUtil.setTextWatcherToShowMaximumLimitReachedMessage(whatHappenedEditText, getResources().getInteger(R.integer.max_limit_10));
+        //CommonUtil.setTextWatcherToShowMaximumLimitReachedMessage(whatHappenedEditText, getResources().getInteger(R.integer.max_limit_10));
+        setUpTextWatcher();
+    }
+
+    private void setUpTextWatcher() {
+        whatHappenedEditText.addTextChangedListener(new TextWatcher() {
+            @Override
+            public void onTextChanged(CharSequence s, int start, int before, int count) {
+                if( s.length() >= getResources().getInteger(R.integer.max_limit_10) ) {
+                    Toast.makeText(getContext(), getContext().getString(R.string.maximum_character_limit_reached), Toast.LENGTH_SHORT).show();
+                }
+                setUpWordCount(count);
+            }
+            @Override
+            public void beforeTextChanged(CharSequence s, int start, int count, int after) {
+
+            }
+            @Override
+            public void afterTextChanged(Editable s) {
+
+            }
+        });
     }
 
     private void setUpWordCount(int words) {

@@ -2,23 +2,13 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:padding="@dimen/padding_16dp"
     android:background="@color/colorPrimary">
-
-
-    <com.shuvam.triangleindicator.TriangularIndicator
-        android:id="@+id/triangle"
-        android:layout_width="match_parent"
-        android:layout_height="80dp"
-        android:layout_marginBottom="@dimen/margin_8dp"
-        app:no_of_sections="5"
-        app:set_colour="@color/cardViewBackground" />
-
 
     <TextView
         android:id="@+id/scroll_position_text_view"
         style="@style/current_page_text_view_style"
         android:layout_below="@+id/triangle" />
-
 
     <android.support.design.widget.FloatingActionButton
         android:id="@+id/fab"

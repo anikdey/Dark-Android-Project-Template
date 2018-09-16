@@ -12,6 +12,7 @@ import javarank.com.dreamjournalui.R;
 import javarank.com.dreamjournalui.common.base.fragment.BaseSupportFragment;
 import javarank.com.dreamjournalui.home.ui.adapter.ViewPagerAdapter;
 import javarank.com.dreamjournalui.home.ui.fragment.pages.AddDreamFragment;
+import javarank.com.dreamjournalui.home.ui.fragment.pages.CustomTabFragment;
 import javarank.com.dreamjournalui.home.ui.fragment.pages.FabAnimationFragment;
 import javarank.com.dreamjournalui.home.ui.fragment.pages.GettingStartedFragment;
 import javarank.com.dreamjournalui.home.ui.fragment.pages.SecondFragment;
@@ -34,6 +35,7 @@ public class HomeFragment extends BaseSupportFragment {
         adapter.addFragment(new GettingStartedFragment(), "Getting Started");
         adapter.addFragment(new SecondFragment(), "Second Fragment");
         adapter.addFragment(new AddDreamFragment(), "Add Dream");
+        adapter.addFragment(CustomTabFragment.newInstance(), "Custom Tab");
         adapter.addFragment(FabAnimationFragment.newInstance(), "fab Fragment");
         viewPager.setAdapter(adapter);
         viewPager.setOffscreenPageLimit(adapter.getCount());

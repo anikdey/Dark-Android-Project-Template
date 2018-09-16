@@ -159,4 +159,33 @@
         <item name="android:src">@drawable/baseline_add_black_18</item>
     </style>
 
+    <style name="base_edit_text_style">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textColorHint">@color/editTextHintColor</item>
+        <item name="android:textColor">@color/white</item>
+        <item name="android:textCursorDrawable">@null</item>
+        <item name="android:drawableTint">@color/editTextHintColor</item>
+        <item name="android:backgroundTint">@color/editTextHintColor</item>
+    </style>
+
+    <style name="what_happened_edit_text_style" parent="base_edit_text_style">
+        <item name="android:layout_height">80dp</item>
+        <item name="android:hint">@string/what_happened_in_your_dream</item>
+        <item name="android:gravity">left</item>
+        <item name="android:maxLength">@integer/max_limit_10</item>
+    </style>
+
+    <style name="tags_edit_text_style" parent="base_edit_text_style">
+        <item name="android:drawableLeft">@drawable/baseline_edit_black_18</item>
+        <item name="android:drawablePadding">@dimen/padding_10dp</item>
+        <item name="android:padding">@dimen/padding_10dp</item>
+        <item name="android:hint">Start typing to tag....</item>
+        <item name="android:maxLines">2</item>
+        <item name="android:gravity">center_vertical</item>
+    </style>
+
+
+
+
 </resources>

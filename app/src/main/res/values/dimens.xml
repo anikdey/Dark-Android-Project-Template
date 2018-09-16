@@ -3,6 +3,7 @@
 
     <dimen name="padding_5dp">5dp</dimen>
     <dimen name="padding_10dp">10dp</dimen>
+    <dimen name="padding_16dp">16dp</dimen>
     <dimen name="padding_20dp">20dp</dimen>
     <dimen name="padding_50dp">50dp</dimen>
 
@@ -28,6 +29,7 @@
 
     <dimen name="rounded_radio_button_height_width">24dp</dimen>
     <dimen name="square_shape_height_width">60dp</dimen>
+    <dimen name="tab_height">80dp</dimen>
 
 
 </resources>

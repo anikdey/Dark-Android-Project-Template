@@ -4,9 +4,9 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/colorPrimary"
-    android:orientation="vertical"
     android:focusableInTouchMode="true"
-    android:padding="@dimen/margin_16dp">
+    android:orientation="vertical"
+    android:padding="@dimen/padding_16dp">
 
     <TextView
         android:id="@+id/scroll_position_text_view"
@@ -29,8 +29,8 @@
                 <RelativeLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:padding="@dimen/margin_16dp"
-                    android:minHeight="100dp">
+                    android:minHeight="100dp"
+                    android:padding="@dimen/margin_16dp">
 
                     <Button
                         android:id="@+id/save_dream_button"
@@ -63,15 +63,8 @@
 
                     <EditText
                         android:id="@+id/what_happened_edit_text"
-                        android:layout_width="match_parent"
-                        android:layout_height="100dp"
-                        android:layout_below="@+id/count_text_view"
-                        android:hint="@string/what_happened_in_your_dream"
-                        android:textColorHint="#9494A4"
-                        android:textColor="@color/white"
-                        android:gravity="left"
-                        android:maxLength="@integer/max_limit_10"
-                        /><!---->
+                        style="@style/what_happened_edit_text_style"
+                        android:layout_below="@+id/count_text_view" />
                 </RelativeLayout>
 
             </android.support.v7.widget.CardView>
@@ -108,8 +101,8 @@
                         <TextView
                             android:id="@+id/no_text_view"
                             style="@style/h1_text_view"
-                            android:layout_marginRight="@dimen/margin_8dp"
                             android:layout_marginBottom="0dp"
+                            android:layout_marginRight="@dimen/margin_8dp"
                             android:text="No" />
 
                         <RadioGroup
@@ -144,8 +137,8 @@
                         <TextView
                             android:id="@+id/very_text_view"
                             style="@style/h1_text_view"
-                            android:layout_marginLeft="@dimen/margin_8dp"
                             android:layout_marginBottom="0dp"
+                            android:layout_marginLeft="@dimen/margin_8dp"
                             android:text="Very" />
                     </LinearLayout>
 
@@ -174,8 +167,8 @@
                         <TextView
                             android:id="@+id/fuzzy_text_view"
                             style="@style/h1_text_view"
-                            android:layout_marginRight="@dimen/margin_8dp"
                             android:layout_marginBottom="0dp"
+                            android:layout_marginRight="@dimen/margin_8dp"
                             android:text="Fuzzy" />
 
                         <RadioGroup
@@ -210,16 +203,12 @@
                         <TextView
                             android:id="@+id/clear_text_view"
                             style="@style/h1_text_view"
-                            android:layout_marginLeft="@dimen/margin_8dp"
                             android:layout_marginBottom="0dp"
+                            android:layout_marginLeft="@dimen/margin_8dp"
                             android:text="Clear" />
                     </LinearLayout>
                 </RelativeLayout>
-
-
             </android.support.v7.widget.CardView>
-
-
 
             <android.support.v7.widget.CardView
                 style="@style/card_view_style"
@@ -232,7 +221,6 @@
                     android:padding="@dimen/margin_16dp">
 
                     <ImageButton style="@style/error_image_button" />
-
 
                     <TextView
                         android:id="@+id/tags_text_view"
@@ -244,24 +232,12 @@
                         style="@style/h2_text_view"
                         android:layout_below="@+id/tags_text_view"
                         android:layout_marginBottom="@dimen/margin_16dp"
-                        android:text="your dream signs" />
+                        android:text="Your dream signs" />
 
                     <EditText
-                        android:layout_below="@+id/tags_small_title_text_view"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:drawableLeft="@drawable/baseline_edit_black_18"
-                        android:drawableTint="#9494A4"
-                        android:drawablePadding="@dimen/padding_10dp"
-                        android:padding="@dimen/padding_10dp"
-                        android:hint="Start typing to tag dream...."
-                        android:textColor="#9494A4"
-                        android:textColorHint="#9494A4"
-                        android:maxLines="2"
-                        android:gravity="center_vertical"/>
+                        style="@style/tags_edit_text_style"
+                        android:layout_below="@+id/tags_small_title_text_view" />
                 </RelativeLayout>
-
-
             </android.support.v7.widget.CardView>
 
             <android.support.v7.widget.CardView
@@ -275,7 +251,6 @@
                     android:padding="@dimen/margin_16dp">
 
                     <ImageButton style="@style/error_image_button" />
-
 
                     <TextView
                         android:id="@+id/voice_recording_text_view"
@@ -287,12 +262,12 @@
                         style="@style/h2_text_view"
                         android:layout_below="@+id/voice_recording_text_view"
                         android:layout_marginBottom="@dimen/margin_16dp"
-                        android:text="too tired to type" />
+                        android:text="Too lazy to type" />
 
                     <ImageView
                         android:id="@+id/recording_image_view"
                         style="@style/voice_recording"
-                        android:layout_below="@+id/tired_to_type_text_view"/>
+                        android:layout_below="@+id/tired_to_type_text_view" />
                 </RelativeLayout>
 
             </android.support.v7.widget.CardView>
@@ -309,7 +284,6 @@
 
                     <ImageButton style="@style/error_image_button" />
 
-
                     <TextView
                         android:id="@+id/photos_text_view"
                         style="@style/h1_text_view"
@@ -320,14 +294,13 @@
                         style="@style/h2_text_view"
                         android:layout_below="@+id/photos_text_view"
                         android:layout_marginBottom="@dimen/margin_16dp"
-                        android:text="Draw your dreams" />
+                        android:text="Draw your lines" />
 
                     <ImageView
                         android:id="@+id/add_photo_image_view"
                         style="@style/photos"
-                        android:layout_below="@+id/draw_dreams_text_view"/>
+                        android:layout_below="@+id/draw_dreams_text_view" />
                 </RelativeLayout>
-
             </android.support.v7.widget.CardView>
         </LinearLayout>
     </ScrollView>
