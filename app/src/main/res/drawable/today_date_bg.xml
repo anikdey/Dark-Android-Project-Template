@@ -3,6 +3,6 @@
     <solid android:color="@color/buttonColorSkyBlue" />
     <stroke android:color="@color/white" android:width="1dp"/>
     <size
-        android:height="70dp"
-        android:width="70dp" />
+        android:height="@dimen/date_item_height_width"
+        android:width="@dimen/date_item_height_width" />
 </shape>

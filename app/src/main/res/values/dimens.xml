@@ -30,6 +30,6 @@
     <dimen name="rounded_radio_button_height_width">24dp</dimen>
     <dimen name="square_shape_height_width">60dp</dimen>
     <dimen name="tab_height">80dp</dimen>
-
+    <dimen name="date_item_height_width">50dp</dimen>
 
 </resources>

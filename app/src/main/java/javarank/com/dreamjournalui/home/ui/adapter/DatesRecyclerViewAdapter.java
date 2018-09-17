@@ -1,6 +1,7 @@
 package javarank.com.dreamjournalui.home.ui.adapter;
 
 import android.support.annotation.NonNull;
+import android.support.v4.content.ContextCompat;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -8,6 +9,7 @@ import android.view.ViewGroup;
 import android.widget.TextView;
 
 import java.util.ArrayList;
+import java.util.Calendar;
 import java.util.List;
 
 import butterknife.BindView;
@@ -19,7 +21,7 @@ import javarank.com.dreamjournalui.home.model.Item;
 
 public class DatesRecyclerViewAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder> {
 
-    List<DateItem> list;
+    private List<DateItem> list;
     protected OnItemClickListener itemClickListener;
 
     public DatesRecyclerViewAdapter() {
@@ -38,6 +40,13 @@ public class DatesRecyclerViewAdapter extends RecyclerView.Adapter<RecyclerView.
         DateItem item = list.get(position);
         DateItemViewHolder mHolder = (DateItemViewHolder) holder;
         mHolder.dateTextView.setText(item.getMonthName()+"\n"+item.getDay());
+        if( position == 0 ) {
+            mHolder.dateTextView.setTextColor(ContextCompat.getColor(mHolder.dateTextView.getContext(), R.color.black));
+            mHolder.dateTextView.setBackground(ContextCompat.getDrawable(mHolder.dateTextView.getContext(), R.drawable.today_date_bg));
+        } else {
+            mHolder.dateTextView.setTextColor(ContextCompat.getColor(mHolder.dateTextView.getContext(), R.color.white));
+            mHolder.dateTextView.setBackground(ContextCompat.getDrawable(mHolder.dateTextView.getContext(), R.drawable.upcoming_date_bg));
+        }
     }
 
     @Override
@@ -55,6 +64,12 @@ public class DatesRecyclerViewAdapter extends RecyclerView.Adapter<RecyclerView.
 
     public void clearItems() {
         this.list.clear();
+    }
+
+    private int getDay() {
+        Calendar calendar = Calendar.getInstance();
+        int date = calendar.get(Calendar.DATE);
+        return date;
     }
 
     class DateItemViewHolder extends RecyclerView.ViewHolder implements View.OnClickListener {
