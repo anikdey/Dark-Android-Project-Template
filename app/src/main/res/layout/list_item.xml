@@ -8,7 +8,7 @@
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:padding="@dimen/margin_16dp">
+        android:padding="@dimen/padding_16dp">
 
         <ImageButton style="@style/share_image_button" />
 
@@ -32,7 +32,6 @@
             android:id="@+id/content_text_view"
             style="@style/h2_text_view"
             android:layout_below="@+id/title_text_view"
-            android:layout_marginBottom="@dimen/margin_16dp"
-            android:text="Note that you took.." />
+            android:layout_marginBottom="0dp" />
     </RelativeLayout>
 </android.support.v7.widget.CardView>

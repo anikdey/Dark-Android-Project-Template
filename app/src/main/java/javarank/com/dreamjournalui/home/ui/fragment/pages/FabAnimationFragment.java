@@ -5,10 +5,13 @@ import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.design.widget.FloatingActionButton;
 import android.view.LayoutInflater;
+import android.view.MotionEvent;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
 import com.github.fabtransitionactivity.SheetLayout;
+import com.shuvam.triangleindicator.TriangularIndicator;
+
 import butterknife.BindView;
 import butterknife.OnClick;
 import javarank.com.dreamjournalui.R;
@@ -20,7 +23,6 @@ public class FabAnimationFragment extends BasePageFragment implements SheetLayou
 
     @BindView(R.id.scroll_position_text_view)
     TextView scrollPositionTextView;
-
     @BindView(R.id.bottom_sheet)
     SheetLayout mSheetLayout;
     @BindView(R.id.fab)
@@ -40,7 +42,6 @@ public class FabAnimationFragment extends BasePageFragment implements SheetLayou
     protected void init() {
         mSheetLayout.setFab(mFab);
         mSheetLayout.setFabAnimationEndListener(this);
-
     }
 
     @OnClick(R.id.fab)

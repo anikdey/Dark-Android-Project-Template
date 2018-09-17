@@ -15,7 +15,7 @@ import javarank.com.dreamjournalui.R;
 
 public class GettingStartedFragment extends BasePageFragment {
 
-    @BindView(R.id.dream_recall_button)
+    @BindView(R.id.sample_button)
     Button dreamRecallButton;
     @BindView(R.id.skip_guide_button)
     Button skipGuideButton;
@@ -74,7 +74,7 @@ public class GettingStartedFragment extends BasePageFragment {
         showMessage(getString(R.string.todo));
     }
 
-    @OnClick(R.id.dream_recall_button)
+    @OnClick(R.id.sample_button)
     protected void onDreamRecallButtonClick() {
         showMessage(getString(R.string.todo));
     }

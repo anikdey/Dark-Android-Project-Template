@@ -3,12 +3,13 @@
 
 
     <string name="demo_text">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industrys standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.</string>
-    <string name="dream_recall">Dream Recall</string>
-    <string name="skip_guide">Skip Guide</string>
+    <string name="sample_button">Sample Button</string>
+    <string name="skip_guide">Skip this</string>
     <string name="big_notification">Testing is awecome. Testing is awecome. Testing is awecome. Testing is awecome. Testing is awecome.</string>
     <string name="todo">Implement according to your requirement</string>
-    <string name="what_happened_in_your_dream">What happened in your dream?</string>
+    <string name="write_down">Write down your stuffs..</string>
     <string name="word_count">%d / %d words</string>
     <string name="maximum_character_limit_reached">Maximum character limit reached</string>
+    <string name="save">Save</string>
 
 </resources>

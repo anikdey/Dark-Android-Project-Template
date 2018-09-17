@@ -37,14 +37,14 @@
                         style="@style/save_dream_button"
                         android:layout_alignParentRight="true"
                         android:paddingRight="@dimen/padding_20dp"
-                        android:text="Save Dream" />
+                        android:text="@string/save" />
 
                     <TextView
                         android:id="@+id/dream_journal_text_view"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginBottom="@dimen/margin_8dp"
-                        android:text="Dream Journal"
+                        android:text="Lorem Text"
                         android:textAllCaps="true"
                         android:textColor="@color/buttonColor"
                         android:textSize="@dimen/text_size_12sp" />
@@ -54,7 +54,7 @@
                         style="@style/h1_text_view"
                         android:layout_below="@+id/dream_journal_text_view"
                         android:layout_marginBottom="@dimen/margin_16dp"
-                        android:text="July 19th" />
+                        android:text="Feb 19th" />
 
                     <TextView
                         android:id="@+id/count_text_view"
@@ -62,8 +62,8 @@
                         android:layout_below="@+id/date_text_view" />
 
                     <EditText
-                        android:id="@+id/what_happened_edit_text"
-                        style="@style/what_happened_edit_text_style"
+                        android:id="@+id/content_edit_text"
+                        style="@style/content_edit_text_style"
                         android:layout_below="@+id/count_text_view" />
                 </RelativeLayout>
 
@@ -84,13 +84,13 @@
                     <TextView
                         android:id="@+id/lucidity_text_view"
                         style="@style/h1_text_view"
-                        android:text="Lucidity" />
+                        android:text="Ipsum" />
 
                     <TextView
                         android:id="@+id/small_title_text_view"
                         style="@style/h2_text_view"
                         android:layout_below="@+id/lucidity_text_view"
-                        android:text="Did you feel in control" />
+                        android:text="How do you feel" />
 
                     <LinearLayout
                         android:id="@+id/lucidity_rating_container"
@@ -151,13 +151,13 @@
                         android:id="@+id/clarity_text_view"
                         style="@style/h1_text_view"
                         android:layout_below="@+id/lucidity_rating_container"
-                        android:text="Clarity" />
+                        android:text="Lorem" />
 
                     <TextView
                         android:id="@+id/ssmall_title_text_view"
                         style="@style/h2_text_view"
                         android:layout_below="@+id/clarity_text_view"
-                        android:text="How clear is it?" />
+                        android:text="Hello there?" />
 
                     <LinearLayout
                         android:id="@+id/clear_rating_container"
@@ -169,7 +169,7 @@
                             style="@style/h1_text_view"
                             android:layout_marginBottom="0dp"
                             android:layout_marginRight="@dimen/margin_8dp"
-                            android:text="Fuzzy" />
+                            android:text="Demo" />
 
                         <RadioGroup
                             android:id="@+id/clear_radio_group"
@@ -205,7 +205,7 @@
                             style="@style/h1_text_view"
                             android:layout_marginBottom="0dp"
                             android:layout_marginLeft="@dimen/margin_8dp"
-                            android:text="Clear" />
+                            android:text="Demo" />
                     </LinearLayout>
                 </RelativeLayout>
             </android.support.v7.widget.CardView>
@@ -232,7 +232,7 @@
                         style="@style/h2_text_view"
                         android:layout_below="@+id/tags_text_view"
                         android:layout_marginBottom="@dimen/margin_16dp"
-                        android:text="Your dream signs" />
+                        android:text="Your known signs" />
 
                     <EditText
                         style="@style/tags_edit_text_style"
@@ -262,7 +262,7 @@
                         style="@style/h2_text_view"
                         android:layout_below="@+id/voice_recording_text_view"
                         android:layout_marginBottom="@dimen/margin_16dp"
-                        android:text="Too lazy to type" />
+                        android:text="Type something" />
 
                     <ImageView
                         android:id="@+id/recording_image_view"
@@ -294,7 +294,7 @@
                         style="@style/h2_text_view"
                         android:layout_below="@+id/photos_text_view"
                         android:layout_marginBottom="@dimen/margin_16dp"
-                        android:text="Draw your lines" />
+                        android:text="Take your pictures" />
 
                     <ImageView
                         android:id="@+id/add_photo_image_view"

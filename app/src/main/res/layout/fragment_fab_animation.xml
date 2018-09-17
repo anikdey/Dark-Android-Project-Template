@@ -2,13 +2,13 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:padding="@dimen/padding_16dp"
     android:background="@color/colorPrimary">
 
     <TextView
         android:id="@+id/scroll_position_text_view"
         style="@style/current_page_text_view_style"
-        android:layout_below="@+id/triangle" />
+        android:layout_below="@+id/triangle"
+        android:layout_margin="@dimen/margin_16dp"/>
 
     <android.support.design.widget.FloatingActionButton
         android:id="@+id/fab"

@@ -173,9 +173,9 @@
         <item name="android:backgroundTint">@color/editTextHintColor</item>
     </style>
 
-    <style name="what_happened_edit_text_style" parent="base_edit_text_style">
+    <style name="content_edit_text_style" parent="base_edit_text_style">
         <item name="android:layout_height">80dp</item>
-        <item name="android:hint">@string/what_happened_in_your_dream</item>
+        <item name="android:hint">@string/write_down</item>
         <item name="android:gravity">left</item>
         <item name="android:maxLength">@integer/max_limit_10</item>
     </style>

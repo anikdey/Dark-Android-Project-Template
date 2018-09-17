@@ -1,9 +1,7 @@
 package javarank.com.dreamjournalui.home.ui.fragment.pages;
 
 import android.os.Bundle;
-import android.os.TestLooperManager;
 import android.support.annotation.Nullable;
-import android.support.v4.content.ContextCompat;
 import android.text.Editable;
 import android.text.TextWatcher;
 import android.view.LayoutInflater;
@@ -16,13 +14,12 @@ import android.widget.Toast;
 import butterknife.BindView;
 import butterknife.OnClick;
 import javarank.com.dreamjournalui.R;
-import javarank.com.dreamjournalui.common.util.CommonUtil;
 
 public class SecondFragment extends BasePageFragment {
 
     @BindView(R.id.scroll_position_text_view)
     TextView scrollPositionTextView;
-    @BindView(R.id.what_happened_edit_text)
+    @BindView(R.id.content_edit_text)
     EditText whatHappenedEditText;
     @BindView(R.id.count_text_view)
     TextView wordCountTextView;

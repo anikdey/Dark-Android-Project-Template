@@ -44,14 +44,14 @@ public class Item {
 
     public static List<Item> getItems() {
         List<Item> items = new ArrayList<>();
-        items.add(new Item("Lucidity", "Demo title", "Demo content"));
-        items.add(new Item("Lucidity", "Demo title", "Demo content"));
-        items.add(new Item("Lucidity", "Demo title", "Demo content"));
-        items.add(new Item("Lucidity", "Demo title", "Demo content"));
-        items.add(new Item("Lucidity", "Demo title", "Demo content"));
-        items.add(new Item("Lucidity", "Demo title", "Demo content"));
-        items.add(new Item("Lucidity", "Demo title", "Demo content"));
-        items.add(new Item("Lucidity", "Demo title", "Demo content"));
+        items.add(new Item("Lorem", "Demo title", "Demo content"));
+        items.add(new Item("Lorem", "Demo title", "Demo content"));
+        items.add(new Item("Lorem", "Demo title", "Demo content"));
+        items.add(new Item("Lorem", "Demo title", "Demo content"));
+        items.add(new Item("Lorem", "Demo title", "Demo content"));
+        items.add(new Item("Lorem", "Demo title", "Demo content"));
+        items.add(new Item("Lorem", "Demo title", "Demo content"));
+        items.add(new Item("Lorem", "Demo title", "Demo content"));
         return items;
     }
 
