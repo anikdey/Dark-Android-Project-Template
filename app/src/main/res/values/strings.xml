@@ -11,5 +11,8 @@
     <string name="word_count">%d / %d words</string>
     <string name="maximum_character_limit_reached">Maximum character limit reached</string>
     <string name="save">Save</string>
+    <string name="undo">Undo</string>
+    <string name="fill">Fill</string>
+    <string name="profile">Profile</string>
 
 </resources>
