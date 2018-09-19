@@ -118,8 +118,9 @@ public class AddDreamFragment extends BasePageFragment {
     }
 
     private int getDaysInMonth(int year, int month, int day) {
-        Calendar mycal = new GregorianCalendar(year, month, day);
-        int daysInMonth = mycal.getActualMaximum(Calendar.DAY_OF_MONTH);
+        Calendar calendar = Calendar.getInstance();
+        //Calendar calendar = new GregorianCalendar(year, month, day);
+        int daysInMonth = calendar.getActualMaximum(Calendar.DAY_OF_MONTH);
         return daysInMonth;
     }
 

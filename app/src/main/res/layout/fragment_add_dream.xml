@@ -16,6 +16,40 @@
         android:layout_below="@+id/scroll_position_text_view"
         android:orientation="vertical">
 
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginBottom="@dimen/margin_16dp"
+            android:gravity="center_vertical">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content"
+                android:text="Lorem text"
+                android:textAllCaps="true"
+                android:textColor="@color/buttonColorSkyBlue"
+                android:textSize="@dimen/text_size_16sp"
+                android:textStyle="bold"/>
+
+            <ImageView
+                style="@style/icon_panel_image_view"
+                android:src="@drawable/baseline_fast_rewind_black_24"
+                android:tint="@color/buttonColor" />
+
+            <ImageView
+                style="@style/icon_panel_image_view"
+                android:src="@drawable/baseline_account_circle_black_24"
+                android:tint="@color/buttonColorSkyBlue" />
+
+            <ImageView
+                style="@style/icon_panel_image_view"
+                android:src="@drawable/baseline_settings_black_24"
+                android:tint="@color/white" />
+
+        </LinearLayout>
+
         <android.support.v7.widget.RecyclerView
             android:id="@+id/dates_recycler_view"
             android:layout_width="match_parent"
@@ -26,8 +60,7 @@
         <android.support.v7.widget.RecyclerView
             android:id="@+id/recycler_view"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginBottom="@dimen/margin_16dp"/>
+            android:layout_height="wrap_content" />
 
         <LinearLayout
             android:id="@+id/nothing_found_linear_layout"

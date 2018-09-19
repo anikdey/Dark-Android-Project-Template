@@ -174,7 +174,7 @@
     </style>
 
     <style name="content_edit_text_style" parent="base_edit_text_style">
-        <item name="android:layout_height">80dp</item>
+        <item name="android:layout_height">wrap_content</item>
         <item name="android:hint">@string/write_down</item>
         <item name="android:gravity">left</item>
         <item name="android:maxLength">@integer/max_limit_10</item>
@@ -190,6 +190,11 @@
     </style>
 
 
+    <style name="icon_panel_image_view">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_marginLeft">@dimen/margin_16dp</item>
+    </style>
 
 
 </resources>
